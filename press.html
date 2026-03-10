@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Press — The Socratic Awards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">THE SOCRATIC AWARDS</a>
+      <button class="nav-toggle" id="navToggle">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li class="has-dropdown">
+          <a href="winners.html">Winners ▾</a>
+                    <div class="dropdown">
+            <div class="dropdown-col">
+              <p class="dropdown-label">By Award Type</p>
+              <a href="winners.html?type=socratic-prize">Socratic Prize Winners</a>
+              <a href="winners.html?type=nominees">Socratic Prize Nominees</a>
+              <a href="winners.html?type=readers-choice">Reader's Choice</a>
+            </div>
+            <div class="dropdown-col">
+              <p class="dropdown-label">By Year</p>
+              <a href="winners.html?year=2025">2025</a>
+              <a href="winners.html?year=2026">2026</a>
+            </div>
+            <div class="dropdown-col">
+              <p class="dropdown-label">2025 by Month</p>
+              <a href="months/2025/january.html">January</a>
+              <a href="months/2025/february.html">February</a>
+              <a href="months/2025/march.html">March</a>
+              <a href="months/2025/april.html">April</a>
+              <a href="months/2025/may.html">May</a>
+              <a href="months/2025/june.html">June</a>
+              <a href="months/2025/july.html">July</a>
+              <a href="months/2025/august.html">August</a>
+              <a href="months/2025/september.html">September</a>
+              <a href="months/2025/october.html">October</a>
+              <a href="months/2025/november.html">November</a>
+              <a href="months/2025/december.html">December</a>
+            </div>
+            <div class="dropdown-col">
+              <p class="dropdown-label">2026 by Month</p>
+              <a href="months/2026/january.html">January</a>
+              <a href="months/2026/february.html">February</a>
+              <a href="months/2026/march.html">March</a>
+              <a href="months/2026/april.html">April</a>
+              <a href="months/2026/may.html">May</a>
+              <a href="months/2026/june.html">June</a>
+              <a href="months/2026/july.html">July</a>
+              <a href="months/2026/august.html">August</a>
+              <a href="months/2026/september.html">September</a>
+              <a href="months/2026/october.html">October</a>
+              <a href="months/2026/november.html">November</a>
+              <a href="months/2026/december.html">December</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="press.html">Press</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <p class="page-hero-eyebrow">Media &amp; Communications</p>
+    <h1>Press Inquiries</h1>
+  </div>
+
+  <div class="press-form">
+    <p style="color: var(--text-muted); margin-bottom: 3rem; text-align: center; font-size: 0.95rem; line-height: 1.8;">
+      For interview requests, press accreditation, media assets, or general inquiries, please complete the form below. We aim to respond to all press inquiries within two business days.
+    </p>
+
+    <!-- Netlify Forms: add data-netlify="true" and netlify-honeypot="bot-field" -->
+    <form name="press-inquiries" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+      <input type="hidden" name="form-name" value="press-inquiries" />
+      <p style="display:none"><input name="bot-field" /></p>
+
+      <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div class="form-group">
+          <label for="fname">First Name *</label>
+          <input type="text" id="fname" name="first-name" required />
+        </div>
+        <div class="form-group">
+          <label for="lname">Last Name *</label>
+          <input type="text" id="lname" name="last-name" required />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="outlet">Media Outlet / Publication *</label>
+        <input type="text" id="outlet" name="outlet" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address *</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="inquiry-type">Inquiry Type</label>
+        <select id="inquiry-type" name="inquiry-type">
+          <option value="">Select one...</option>
+          <option value="interview">Interview Request</option>
+          <option value="accreditation">Press Accreditation</option>
+          <option value="assets">Media Assets / Images</option>
+          <option value="announcement">Announcement / Coverage</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="deadline">Deadline (if applicable)</label>
+        <input type="date" id="deadline" name="deadline" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" required placeholder="Please describe your inquiry in detail..."></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit">Send Inquiry</button>
+    </form>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">THE SOCRATIC AWARDS</p>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="rules.html">Rules</a>
+        <a href="press.html">Press Inquiries</a>
+        <a href="winners.html">Winners</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 The Socratic Awards. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

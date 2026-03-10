@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Socratic Awards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">THE SOCRATIC AWARDS</a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">&#9776;</button>
+      <ul class="nav-links" id="navLinks">
+        <li class="has-dropdown">
+          <a href="winners.html">Winners ▾</a>
+                    <div class="dropdown">
+            <div class="dropdown-col">
+              <p class="dropdown-label">By Award Type</p>
+              <a href="winners.html?type=socratic-prize">Socratic Prize Winners</a>
+              <a href="winners.html?type=nominees">Socratic Prize Nominees</a>
+              <a href="winners.html?type=readers-choice">Reader's Choice</a>
+            </div>
+            <div class="dropdown-col">
+              <p class="dropdown-label">By Year</p>
+              <a href="winners.html?year=2025">2025</a>
+              <a href="winners.html?year=2026">2026</a>
+            </div>
+            <div class="dropdown-col">
+              <p class="dropdown-label">2025 by Month</p>
+              <a href="months/2025/january.html">January</a>
+              <a href="months/2025/february.html">February</a>
+              <a href="months/2025/march.html">March</a>
+              <a href="months/2025/april.html">April</a>
+              <a href="months/2025/may.html">May</a>
+              <a href="months/2025/june.html">June</a>
+              <a href="months/2025/july.html">July</a>
+              <a href="months/2025/august.html">August</a>
+              <a href="months/2025/september.html">September</a>
+              <a href="months/2025/october.html">October</a>
+              <a href="months/2025/november.html">November</a>
+              <a href="months/2025/december.html">December</a>
+            </div>
+            <div class="dropdown-col">
+              <p class="dropdown-label">2026 by Month</p>
+              <a href="months/2026/january.html">January</a>
+              <a href="months/2026/february.html">February</a>
+              <a href="months/2026/march.html">March</a>
+              <a href="months/2026/april.html">April</a>
+              <a href="months/2026/may.html">May</a>
+              <a href="months/2026/june.html">June</a>
+              <a href="months/2026/july.html">July</a>
+              <a href="months/2026/august.html">August</a>
+              <a href="months/2026/september.html">September</a>
+              <a href="months/2026/october.html">October</a>
+              <a href="months/2026/november.html">November</a>
+              <a href="months/2026/december.html">December</a>
+            </div>
+          </div>
+        </li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="rules.html">Rules</a></li>
+        <li><a href="press.html">Press</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-bg" id="heroBg">
+      <!-- Carousel slides: replace these Unsplash URLs with your own images later -->
+      <div class="carousel-slide active" style="background-image: url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=1600&q=80')"></div>
+      <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?w=1600&q=80')"></div>
+      <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1600&q=80')"></div>
+      <div class="carousel-slide" style="background-image: url('https://images.unsplash.com/photo-1512820790803-83ca734da794?w=1600&q=80')"></div>
+    </div>
+    <div class="hero-content">
+      <h1 class="hero-title">The Socratic<br><em>Awards</em></h1>
+      <p class="hero-subtitle">Honoring exceptional literature that elevates, challenges, and endures.</p>
+      <a href="winners.html" class="btn-primary">Explore the Winners</a>
+    </div>
+    <div class="carousel-dots" id="carouselDots"></div>
+    <div class="hero-scroll">SCROLL</div>
+  </header>
+
+  <!-- LATEST WINNER SPOTLIGHT -->
+  <section class="spotlight">
+    <div class="spotlight-label">2025 Winner · Fiction</div>
+    <div class="spotlight-inner">
+      <div class="spotlight-img-wrap">
+        <div class="spotlight-img-placeholder">
+          <span>Book Cover</span>
+        </div>
+      </div>
+      <div class="spotlight-text">
+        <p class="spotlight-tag">Featured Winner</p>
+        <h2>Book Title Goes Here</h2>
+        <p class="spotlight-author">by Author Name</p>
+        <p class="spotlight-excerpt">A brief excerpt from the book summary or the reason it won goes here. This gives visitors a compelling preview of the winning work and draws them deeper into the story.</p>
+        <a href="winners/sample-winner.html" class="btn-secondary">Read Full Profile</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEARCH / BROWSE -->
+  <section class="browse">
+    <div class="browse-inner">
+      <h2 class="section-title">Browse All Winners</h2>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search by title, author, or award..." />
+        <select id="filterType">
+          <option value="">All Award Types</option>
+          <option value="socratic-prize">Socratic Prize Winners</option>
+          <option value="nominees">Socratic Prize Nominees</option>
+          <option value="readers-choice">Reader's Choice</option>
+        </select>
+        <select id="filterYear">
+          <option value="">All Years</option>
+          <option value="2025">2025</option>
+              <option value="2026">2026</option>
+        </select>
+                <select id="filterGenre">
+          <option value="">All Genres</option>
+          <option value="mystery">Mystery</option>
+          <option value="horror">Horror</option>
+          <option value="historical">Historical</option>
+          <option value="comedy">Comedy</option>
+          <option value="adventure">Adventure</option>
+          <option value="drama">Drama</option>
+          <option value="romance">Romance</option>
+          <option value="action">Action</option>
+          <option value="fantasy">Fantasy</option>
+          <option value="psychological">Psychological</option>
+          <option value="dystopian">Dystopian</option>
+          <option value="sci-fi">Sci-Fi</option>
+        </select>
+        <button onclick="filterWinners()" class="btn-search">Search</button>
+      </div>
+
+      <div class="winners-grid" id="winnersGrid">
+        <a href="winners/sample-winner.html" class="winner-card" data-type="socratic-prize" data-year="2025" data-genre="fantasy">
+          <div class="card-img-wrap"><div class="card-img-placeholder"></div></div>
+          <div class="card-body">
+            <span class="card-tag">Socratic Prize Winners · 2025</span>
+            <h3>Book Title</h3>
+            <p>Author Name</p>
+            <span class="genre-badge">Fantasy</span>
+          </div>
+        </a>
+        <a href="winners/sample-winner.html" class="winner-card" data-type="nominees" data-year="2025" data-genre="mystery">
+          <div class="card-img-wrap"><div class="card-img-placeholder"></div></div>
+          <div class="card-body">
+            <span class="card-tag">Socratic Prize Nominees · 2025</span>
+            <h3>Book Title</h3>
+            <p>Author Name</p>
+            <span class="genre-badge">Mystery</span>
+          </div>
+        </a>
+        <a href="winners/sample-winner.html" class="winner-card" data-type="readers-choice" data-year="2025" data-genre="sci-fi">
+          <div class="card-img-wrap"><div class="card-img-placeholder"></div></div>
+          <div class="card-body">
+            <span class="card-tag">Reader's Choice · 2025</span>
+            <h3>Book Title</h3>
+            <p>Author Name</p>
+            <span class="genre-badge">Sci-Fi</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT STRIP -->
+  <section class="about-strip">
+    <div class="about-strip-inner">
+      <div>
+        <h2>About The Socratic Awards</h2>
+        <p>The Socratic Awards recognizes outstanding literary achievement across fiction, LitRPG, and beyond. Our mission is to champion books that matter — works that shift perspectives and leave lasting impressions.</p>
+        <a href="about.html" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-logo">THE SOCRATIC AWARDS</p>
+      <nav class="footer-nav">
+        <a href="about.html">About</a>
+        <a href="rules.html">Rules</a>
+        <a href="press.html">Press Inquiries</a>
+        <a href="winners.html">Winners</a>
+      </nav>
+      <p class="footer-copy">&copy; 2025 The Socratic Awards. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+</body>
+</html>

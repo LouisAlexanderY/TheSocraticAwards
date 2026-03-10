@@ -1,0 +1,84 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+
+  # ─── WINNERS ───────────────────────────────────────────────
+  - name: "winners"
+    label: "Winners"
+    folder: "winners"
+    create: true
+    slug: "{{slug}}"
+    extension: "html"
+    format: "frontmatter"
+    fields:
+      - { label: "Book Title", name: "title", widget: "string" }
+      - { label: "Author Name", name: "author", widget: "string" }
+      - label: "Award Category"
+        name: "category"
+        widget: "select"
+        options: ["Socratic Prize Winners", "Socratic Prize Nominees", "Reader's Choice"]
+      - label: "Primary Genre"
+        name: "genre"
+        widget: "select"
+        options: ["Mystery", "Horror", "Historical", "Comedy", "Adventure", "Drama", "Romance", "Action", "Fantasy", "Psychological", "Dystopian", "Sci-Fi"]
+      - label: "Year"
+        name: "year"
+        widget: "select"
+        options: ["2025", "2026"]
+      - label: "Month"
+        name: "month"
+        widget: "select"
+        options: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+      - { label: "Publisher", name: "publisher", widget: "string", required: false }
+      - { label: "Number of Pages", name: "pages", widget: "string", required: false }
+      - { label: "Book Cover Image", name: "cover", widget: "image", required: false }
+      - { label: "Author Photo", name: "author_photo", widget: "image", required: false }
+      - { label: "Book Summary", name: "summary", widget: "text" }
+      - { label: "Why It Won", name: "why_it_won", widget: "text" }
+      - { label: "About the Author", name: "author_bio", widget: "text" }
+
+  # ─── PAGES ─────────────────────────────────────────────────
+  - name: "pages"
+    label: "Pages"
+    files:
+
+      - label: "About Page"
+        name: "about"
+        file: "_data/about.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "About the Awards" }
+          - { label: "Mission Statement", name: "mission", widget: "text" }
+          - { label: "History", name: "history", widget: "text" }
+          - { label: "Judging Process", name: "judging", widget: "text" }
+
+      - label: "Rules Page"
+        name: "rules"
+        file: "_data/rules.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "Rules & Guidelines" }
+          - { label: "Eligibility Rules", name: "eligibility", widget: "text" }
+          - { label: "Submission Process", name: "submission", widget: "text" }
+          - { label: "Judging Criteria", name: "judging", widget: "text" }
+
+      - label: "Press Page"
+        name: "press"
+        file: "_data/press.json"
+        fields:
+          - { label: "Page Title", name: "title", widget: "string", default: "Press Inquiries" }
+          - { label: "Intro Text", name: "intro", widget: "text" }
+          - { label: "Contact Email", name: "email", widget: "string", required: false }
+
+      - label: "Homepage"
+        name: "homepage"
+        file: "_data/homepage.json"
+        fields:
+          - { label: "Hero Subtitle", name: "hero_subtitle", widget: "string" }
+          - { label: "Featured Winner Title", name: "featured_title", widget: "string", required: false }
+          - { label: "Featured Winner Author", name: "featured_author", widget: "string", required: false }
+          - { label: "Featured Winner Excerpt", name: "featured_excerpt", widget: "text", required: false }
+          - { label: "Featured Winner Link", name: "featured_link", widget: "string", required: false }
